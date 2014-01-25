@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Hangman_Mk.I
 {
-    public partial class Form1 : Form
+    public partial class frmHangman : Form
     {
-        public Form1()
+        public frmHangman()
         {
             InitializeComponent();
         }
+
+        Image image = Image.FromFile("images/hang1.gif");
+
+        PictureBox pictureBox = new PictureBox();
+        pictureBox.Image
     }
 }
