@@ -205,7 +205,7 @@ namespace Hangman_Mk.I
 
             if (wordArray.Contains(guess))
             {
-
+                cons
             }
             else
             {
