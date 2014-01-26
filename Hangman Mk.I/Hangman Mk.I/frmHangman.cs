@@ -190,6 +190,13 @@ namespace Hangman_Mk.I
                 Console.WriteLine(c);
             }
 
+            foreach(char c in word)
+            {
+                lblDashes.Text += "_ ";
+            }
+
+            
+
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
@@ -215,11 +222,13 @@ namespace Hangman_Mk.I
                             "You got hanged! \nThe word was: " + word, 
                             "You're Dead!"
                         );
+
                         DialogResult result = MessageBox.Show(
                             "Do you want to play again?", 
                             "Play again", 
                             MessageBoxButtons.YesNo
                         );
+
                         if(result == DialogResult.Yes)
                         {
                             lives = 10;
@@ -232,7 +241,6 @@ namespace Hangman_Mk.I
                             {
                                 Console.WriteLine(c);
                             }
-
                         }
                         else
                         {
@@ -265,12 +273,14 @@ namespace Hangman_Mk.I
                             break;
                     case 9:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang1;
-                        break;
-
-
+                            break;
                 }
                 textBoxLives.Text = Convert.ToString(lives);
             }
         }
+
+        
+
+        
     }
 }
