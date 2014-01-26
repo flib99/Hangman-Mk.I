@@ -28,6 +28,7 @@ namespace Hangman_Mk.I
         int randomNumber;
         string[] words = new string[] { };
         char[] wordArray = new char[] { };
+		char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 
         private void btnLanguageGo_Click(object sender, EventArgs e)
         {
@@ -205,13 +206,15 @@ namespace Hangman_Mk.I
 
             if (wordArray.Contains(guess))
             {
-				
+				lblResult.Text = "Yes, " + guess + " is in the word!";
+				alphabet.Select(guess);
             }
             else
             {
                 lives = lives - 1;
 
                 textBoxGuessedLetters.Text += guess + ", ";
+				lblResult.Text = "Nope, " + guess + " is not in the word.";
 
                 switch (lives)
                 {
