@@ -117,6 +117,7 @@
             "Croatian",
             "Czech",
             "Danish",
+            "Debug",
             "English",
             "English (US)",
             "French",
@@ -139,7 +140,6 @@
             this.comboBoxLanguage.Location = new System.Drawing.Point(7, 31);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(338, 32);
-            this.comboBoxLanguage.Sorted = true;
             this.comboBoxLanguage.TabIndex = 1;
             // 
             // btnLanguageGo

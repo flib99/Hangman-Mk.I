@@ -1363,6 +1363,18 @@ namespace Hangman_Mk.I.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to hello
+        ///computer
+        ///orange
+        ///mouse.
+        /// </summary>
+        internal static string debug {
+            get {
+                return ResourceManager.GetString("debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A4
         ///ad
         ///af
