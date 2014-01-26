@@ -16,7 +16,7 @@ namespace Hangman_Mk.I
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHangman());
+           Application.Run(new frmHangman());
         }
     }
 }

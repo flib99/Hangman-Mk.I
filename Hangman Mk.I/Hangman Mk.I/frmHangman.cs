@@ -23,7 +23,7 @@ namespace Hangman_Mk.I
 
         string word;
         int wordsLength;
-        int lives = 11;
+        int lives = 10;
         char guess;
         int randomNumber;
         string[] words = new string[] { };
@@ -202,48 +202,75 @@ namespace Hangman_Mk.I
             }
             else
             {
-                lives = lives--;
+                lives = lives - 1;
 
                 textBoxGuessedLetters.Text += guess + ", ";
 
                 switch (lives)
                 {
-                    case 1:
+                    case 0:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang10;
+                        textBoxLives.Text = "0";
+                        MessageBox.Show(
+                            "You got hanged! \nThe word was: " + word, 
+                            "You're Dead!"
+                        );
+                        DialogResult result = MessageBox.Show(
+                            "Do you want to play again?", 
+                            "Play again", 
+                            MessageBoxButtons.YesNo
+                        );
+                        if(result == DialogResult.Yes)
+                        {
+                            lives = 10;
+                            word = "";
+                            textBoxGuessedLetters.Text = "";
+                            textBoxGuess.Text = "";
+                            tabControl1.SelectedIndex = 0;
+
+                            foreach(char c in wordArray)
+                            {
+                                Console.WriteLine(c);
+                            }
+
+                        }
+                        else
+                        {
+                            Application.Exit();
+                        }
                             break;
-                    case 2:
+                    case 1:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang9;
                             break;
-                    case 3:
+                    case 2:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang8;
                             break;
-                    case 4:
+                    case 3:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang7;
                             break;
-                    case 5:
+                    case 4:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang6;
                             break;
-                    case 6:
+                    case 5:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang5;
                             break;
-                    case 7:
+                    case 6:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang4;
                             break;
-                    case 8:
+                    case 7:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang3;
                             break;
-                    case 9:
+                    case 8:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang2;
                             break;
-                    case 10:
+                    case 9:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang1;
-                            break;
+                        break;
 
 
                 }
+                textBoxLives.Text = Convert.ToString(lives);
             }
-
-
         }
     }
 }
