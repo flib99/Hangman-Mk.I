@@ -32,13 +32,19 @@
             this.tabPageLanguage = new System.Windows.Forms.TabPage();
             this.tabPageHangman = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxWord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
             this.btnLanguageGo = new System.Windows.Forms.Button();
+            this.pictureBoxHangman = new System.Windows.Forms.PictureBox();
+            this.btnGuess = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxGuessedLetters = new System.Windows.Forms.TextBox();
+            this.textBoxGuess = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLanguage.SuspendLayout();
             this.tabPageHangman.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHangman)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -53,7 +59,12 @@
             // 
             // tabPageLanguage
             // 
-            this.tabPageLanguage.Controls.Add(this.textBox1);
+            this.tabPageLanguage.Controls.Add(this.textBoxGuess);
+            this.tabPageLanguage.Controls.Add(this.textBoxGuessedLetters);
+            this.tabPageLanguage.Controls.Add(this.label3);
+            this.tabPageLanguage.Controls.Add(this.btnGuess);
+            this.tabPageLanguage.Controls.Add(this.pictureBoxHangman);
+            this.tabPageLanguage.Controls.Add(this.textBoxWord);
             this.tabPageLanguage.Location = new System.Drawing.Point(4, 22);
             this.tabPageLanguage.Name = "tabPageLanguage";
             this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
@@ -86,13 +97,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hangman";
             // 
-            // textBox1
+            // textBoxWord
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(7, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 31);
-            this.textBox1.TabIndex = 0;
+            this.textBoxWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWord.Location = new System.Drawing.Point(7, 7);
+            this.textBoxWord.Name = "textBoxWord";
+            this.textBoxWord.Size = new System.Drawing.Size(338, 31);
+            this.textBoxWord.TabIndex = 0;
             // 
             // label2
             // 
@@ -152,6 +163,53 @@
             this.btnLanguageGo.UseVisualStyleBackColor = true;
             this.btnLanguageGo.Click += new System.EventHandler(this.btnLanguageGo_Click);
             // 
+            // pictureBoxHangman
+            // 
+            this.pictureBoxHangman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxHangman.Image = global::Hangman_Mk.I.Properties.Resources.hang0;
+            this.pictureBoxHangman.Location = new System.Drawing.Point(7, 45);
+            this.pictureBoxHangman.Name = "pictureBoxHangman";
+            this.pictureBoxHangman.Size = new System.Drawing.Size(337, 193);
+            this.pictureBoxHangman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHangman.TabIndex = 1;
+            this.pictureBoxHangman.TabStop = false;
+            // 
+            // btnGuess
+            // 
+            this.btnGuess.Location = new System.Drawing.Point(63, 288);
+            this.btnGuess.Name = "btnGuess";
+            this.btnGuess.Size = new System.Drawing.Size(75, 23);
+            this.btnGuess.TabIndex = 2;
+            this.btnGuess.Text = "Guess";
+            this.btnGuess.UseVisualStyleBackColor = true;
+            this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 250);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Guessed Letters:";
+            // 
+            // textBoxGuessedLetters
+            // 
+            this.textBoxGuessedLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGuessedLetters.Location = new System.Drawing.Point(145, 244);
+            this.textBoxGuessedLetters.Name = "textBoxGuessedLetters";
+            this.textBoxGuessedLetters.Size = new System.Drawing.Size(199, 26);
+            this.textBoxGuessedLetters.TabIndex = 4;
+            // 
+            // textBoxGuess
+            // 
+            this.textBoxGuess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGuess.Location = new System.Drawing.Point(11, 288);
+            this.textBoxGuess.Name = "textBoxGuess";
+            this.textBoxGuess.Size = new System.Drawing.Size(32, 26);
+            this.textBoxGuess.TabIndex = 5;
+            // 
             // frmHangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +224,7 @@
             this.tabPageLanguage.PerformLayout();
             this.tabPageHangman.ResumeLayout(false);
             this.tabPageHangman.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHangman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,8 +238,13 @@
         private System.Windows.Forms.ComboBox comboBoxLanguage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPageLanguage;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxWord;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxGuess;
+        private System.Windows.Forms.TextBox textBoxGuessedLetters;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGuess;
+        private System.Windows.Forms.PictureBox pictureBoxHangman;
 
     }
 }

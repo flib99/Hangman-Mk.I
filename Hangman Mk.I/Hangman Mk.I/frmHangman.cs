@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace Hangman_Mk.I
 {
@@ -20,8 +21,13 @@ namespace Hangman_Mk.I
             comboBoxLanguage.SelectedItem = "Debug";     
         }
 
+        string word;
         int wordsLength;
+        int lives = 11;
+        char guess;
+        int randomNumber;
         string[] words = new string[] { };
+        char[] wordArray = new char[] { };
 
         private void btnLanguageGo_Click(object sender, EventArgs e)
         {
@@ -170,6 +176,74 @@ namespace Hangman_Mk.I
             {
                 MessageBox.Show("Sorry, we don't have that language" + "\n" + "Select one from the list");
             }
+
+            Random random = new Random();
+            randomNumber = random.Next(0, wordsLength);
+            word = words[randomNumber];
+
+            Console.WriteLine(wordsLength + " " + randomNumber + " " + word);
+
+            wordArray = word.ToCharArray();
+
+            foreach(char c in wordArray)
+            {
+                Console.WriteLine(c);
+            }
+
+        }
+
+        private void btnGuess_Click(object sender, EventArgs e)
+        {
+            guess = Convert.ToChar(textBoxGuess.Text);
+
+            if (wordArray.Contains(guess))
+            {
+
+            }
+            else
+            {
+                lives = lives--;
+
+                textBoxGuessedLetters.Text += guess + ", ";
+
+                switch (lives)
+                {
+                    case 1:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang10;
+                            break;
+                    case 2:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang9;
+                            break;
+                    case 3:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang8;
+                            break;
+                    case 4:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang7;
+                            break;
+                    case 5:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang6;
+                            break;
+                    case 6:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang5;
+                            break;
+                    case 7:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang4;
+                            break;
+                    case 8:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang3;
+                            break;
+                    case 9:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang2;
+                            break;
+                    case 10:
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang1;
+                            break;
+
+
+                }
+            }
+
+
         }
     }
 }
