@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Hangman_Mk.I
 {
@@ -15,11 +16,23 @@ namespace Hangman_Mk.I
         public frmHangman()
         {
             InitializeComponent();
+
+
+            StreamReader reader = new StreamReader("Resources/dictionary.txt");
+
+            string fileString = "";
+            int indexInteger = 0;
+
+            string[] words = new string[] { };
+
+            while (fileString != null)
+            {
+                fileString = reader.ReadLine();
+                if (fileString != null)
+                {
+                    words[indexInteger] = fileString;
+                }
+            }
         }
-
-        Image image = Image.FromFile("images/hang1.gif");
-
-        PictureBox pictureBox = new PictureBox();
-        pictureBox.Image
     }
 }

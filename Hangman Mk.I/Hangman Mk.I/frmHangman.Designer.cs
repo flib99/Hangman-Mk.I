@@ -43,10 +43,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "images";
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::Hangman_Mk.I.Properties.Resources.hang0;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(13, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 131);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
