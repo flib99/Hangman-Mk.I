@@ -29,6 +29,7 @@ namespace Hangman_Mk.I
         string[] words = new string[] { };
         char[] wordArray = new char[] { };
 		char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+		string wordCurrentGuess;
 
         private void btnLanguageGo_Click(object sender, EventArgs e)
         {
@@ -178,6 +179,11 @@ namespace Hangman_Mk.I
                 MessageBox.Show("Sorry, we don't have that language" + "\n" + "Select one from the list");
             }
 
+			for (int i = 0; i < words.Length; i++)
+			{
+				words[i] = words[i].ToUpper();
+			}
+
             Random random = new Random();
             randomNumber = random.Next(0, wordsLength);
             word = words[randomNumber];
@@ -193,7 +199,7 @@ namespace Hangman_Mk.I
 
             foreach(char c in word)
             {
-                lblDashes.Text += "_ ";
+                lblWord.Text += "*";
             }
 
             
@@ -207,7 +213,38 @@ namespace Hangman_Mk.I
             if (wordArray.Contains(guess))
             {
 				lblResult.Text = "Yes, " + guess + " is in the word!";
-				alphabet.Select(guess);
+				textBoxGuessedLetters.Text += guess + ", ";
+
+				wordCurrentGuess = lblWord.Text;
+
+				int result = 0;
+				int counter = 0;
+				int foundLen = 0;
+				string newChar = "";
+
+				
+
+				for (int i = 0; i < word.Length; i++)
+				{
+					result = word.IndexOf(guess, foundLen, word.Length - foundLen);
+
+					if (result != -1)
+					{
+						foundLen = result + 1;
+						counter++;
+
+						newChar = word.Substring((result), 1);   //grab the letter to be replaced
+
+						wordCurrentGuess = wordCurrentGuess.Remove(result, 1);              //Remove the * character at this position
+
+						wordCurrentGuess = wordCurrentGuess.Insert(result, newChar);        //insert the new character
+					}
+				}
+
+				lblWord.Text = wordCurrentGuess;
+
+				
+				
             }
             else
             {
@@ -281,6 +318,147 @@ namespace Hangman_Mk.I
                 textBoxLives.Text = Convert.ToString(lives);
             }
         }
+
+
+		private void letterW_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "W";
+		}
+
+		private void letterDecimal_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = ".";
+		}
+
+		private void letterComma_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterX_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterU_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterS_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterR_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterQ_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterP_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterO_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterN_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterM_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterL_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterK_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterJ_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterI_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterH_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterG_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterF_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterE_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterD_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterB_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterZ_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterY_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterV_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterC_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterT_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
+
+		private void letterA_Click(object sender, EventArgs e)
+		{
+			textBoxGuess.Text = "";
+		}
 
         
 

@@ -34,8 +34,8 @@
 			this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.tabPageLanguage = new System.Windows.Forms.TabPage();
+			this.lblResult = new System.Windows.Forms.Label();
 			this.lblWord = new System.Windows.Forms.Label();
-			this.lblDashes = new System.Windows.Forms.Label();
 			this.textBoxLives = new System.Windows.Forms.TextBox();
 			this.textBoxGuess = new System.Windows.Forms.TextBox();
 			this.textBoxGuessedLetters = new System.Windows.Forms.TextBox();
@@ -43,7 +43,35 @@
 			this.btnGuess = new System.Windows.Forms.Button();
 			this.pictureBoxHangman = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.lblResult = new System.Windows.Forms.Label();
+			this.letterW = new System.Windows.Forms.Button();
+			this.letterX = new System.Windows.Forms.Button();
+			this.letterU = new System.Windows.Forms.Button();
+			this.letterS = new System.Windows.Forms.Button();
+			this.letterR = new System.Windows.Forms.Button();
+			this.letterQ = new System.Windows.Forms.Button();
+			this.letterP = new System.Windows.Forms.Button();
+			this.letterO = new System.Windows.Forms.Button();
+			this.letterN = new System.Windows.Forms.Button();
+			this.letterM = new System.Windows.Forms.Button();
+			this.letterL = new System.Windows.Forms.Button();
+			this.letterK = new System.Windows.Forms.Button();
+			this.letterJ = new System.Windows.Forms.Button();
+			this.letterI = new System.Windows.Forms.Button();
+			this.letterH = new System.Windows.Forms.Button();
+			this.letterG = new System.Windows.Forms.Button();
+			this.letterF = new System.Windows.Forms.Button();
+			this.letterE = new System.Windows.Forms.Button();
+			this.letterD = new System.Windows.Forms.Button();
+			this.letterB = new System.Windows.Forms.Button();
+			this.letterZ = new System.Windows.Forms.Button();
+			this.letterY = new System.Windows.Forms.Button();
+			this.letterV = new System.Windows.Forms.Button();
+			this.letterC = new System.Windows.Forms.Button();
+			this.letterT = new System.Windows.Forms.Button();
+			this.letterA = new System.Windows.Forms.Button();
+			this.label4 = new System.Windows.Forms.Label();
+			this.letterDecimal = new System.Windows.Forms.Button();
+			this.letterComma = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPageHangman.SuspendLayout();
 			this.tabPageLanguage.SuspendLayout();
@@ -57,7 +85,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(12, 49);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(359, 457);
+			this.tabControl1.Size = new System.Drawing.Size(487, 582);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPageHangman
@@ -133,45 +161,73 @@
 			// 
 			// tabPageLanguage
 			// 
+			this.tabPageLanguage.Controls.Add(this.letterComma);
+			this.tabPageLanguage.Controls.Add(this.letterDecimal);
+			this.tabPageLanguage.Controls.Add(this.label4);
+			this.tabPageLanguage.Controls.Add(this.letterW);
+			this.tabPageLanguage.Controls.Add(this.letterX);
+			this.tabPageLanguage.Controls.Add(this.btnGuess);
+			this.tabPageLanguage.Controls.Add(this.letterU);
+			this.tabPageLanguage.Controls.Add(this.textBoxGuess);
+			this.tabPageLanguage.Controls.Add(this.textBoxLives);
+			this.tabPageLanguage.Controls.Add(this.letterS);
+			this.tabPageLanguage.Controls.Add(this.letterR);
+			this.tabPageLanguage.Controls.Add(this.letterQ);
+			this.tabPageLanguage.Controls.Add(this.letterP);
+			this.tabPageLanguage.Controls.Add(this.letterO);
+			this.tabPageLanguage.Controls.Add(this.letterN);
+			this.tabPageLanguage.Controls.Add(this.letterM);
+			this.tabPageLanguage.Controls.Add(this.letterL);
+			this.tabPageLanguage.Controls.Add(this.letterK);
+			this.tabPageLanguage.Controls.Add(this.letterJ);
+			this.tabPageLanguage.Controls.Add(this.letterI);
+			this.tabPageLanguage.Controls.Add(this.letterH);
+			this.tabPageLanguage.Controls.Add(this.letterG);
+			this.tabPageLanguage.Controls.Add(this.letterF);
+			this.tabPageLanguage.Controls.Add(this.letterE);
+			this.tabPageLanguage.Controls.Add(this.letterD);
+			this.tabPageLanguage.Controls.Add(this.letterB);
+			this.tabPageLanguage.Controls.Add(this.letterZ);
+			this.tabPageLanguage.Controls.Add(this.letterY);
+			this.tabPageLanguage.Controls.Add(this.letterV);
+			this.tabPageLanguage.Controls.Add(this.letterC);
+			this.tabPageLanguage.Controls.Add(this.letterT);
+			this.tabPageLanguage.Controls.Add(this.letterA);
 			this.tabPageLanguage.Controls.Add(this.lblResult);
 			this.tabPageLanguage.Controls.Add(this.lblWord);
-			this.tabPageLanguage.Controls.Add(this.lblDashes);
-			this.tabPageLanguage.Controls.Add(this.textBoxLives);
-			this.tabPageLanguage.Controls.Add(this.textBoxGuess);
 			this.tabPageLanguage.Controls.Add(this.textBoxGuessedLetters);
 			this.tabPageLanguage.Controls.Add(this.label3);
-			this.tabPageLanguage.Controls.Add(this.btnGuess);
 			this.tabPageLanguage.Controls.Add(this.pictureBoxHangman);
 			this.tabPageLanguage.Location = new System.Drawing.Point(4, 22);
 			this.tabPageLanguage.Name = "tabPageLanguage";
 			this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLanguage.Size = new System.Drawing.Size(351, 431);
+			this.tabPageLanguage.Size = new System.Drawing.Size(479, 556);
 			this.tabPageLanguage.TabIndex = 0;
 			this.tabPageLanguage.Text = "Hangman";
 			this.tabPageLanguage.UseVisualStyleBackColor = true;
 			// 
+			// lblResult
+			// 
+			this.lblResult.AutoSize = true;
+			this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblResult.Location = new System.Drawing.Point(11, 321);
+			this.lblResult.Name = "lblResult";
+			this.lblResult.Size = new System.Drawing.Size(0, 20);
+			this.lblResult.TabIndex = 9;
+			// 
 			// lblWord
 			// 
 			this.lblWord.AutoSize = true;
-			this.lblWord.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblWord.Location = new System.Drawing.Point(6, 3);
+			this.lblWord.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblWord.Location = new System.Drawing.Point(11, 3);
 			this.lblWord.Name = "lblWord";
-			this.lblWord.Size = new System.Drawing.Size(0, 23);
+			this.lblWord.Size = new System.Drawing.Size(0, 30);
 			this.lblWord.TabIndex = 8;
-			// 
-			// lblDashes
-			// 
-			this.lblDashes.AutoSize = true;
-			this.lblDashes.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDashes.Location = new System.Drawing.Point(6, 6);
-			this.lblDashes.Name = "lblDashes";
-			this.lblDashes.Size = new System.Drawing.Size(0, 23);
-			this.lblDashes.TabIndex = 7;
 			// 
 			// textBoxLives
 			// 
 			this.textBoxLives.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxLives.Location = new System.Drawing.Point(171, 288);
+			this.textBoxLives.Location = new System.Drawing.Point(196, 286);
 			this.textBoxLives.Name = "textBoxLives";
 			this.textBoxLives.Size = new System.Drawing.Size(100, 26);
 			this.textBoxLives.TabIndex = 6;
@@ -180,7 +236,7 @@
 			// textBoxGuess
 			// 
 			this.textBoxGuess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxGuess.Location = new System.Drawing.Point(11, 288);
+			this.textBoxGuess.Location = new System.Drawing.Point(6, 286);
 			this.textBoxGuess.Name = "textBoxGuess";
 			this.textBoxGuess.Size = new System.Drawing.Size(32, 26);
 			this.textBoxGuess.TabIndex = 5;
@@ -190,7 +246,7 @@
 			this.textBoxGuessedLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBoxGuessedLetters.Location = new System.Drawing.Point(145, 244);
 			this.textBoxGuessedLetters.Name = "textBoxGuessedLetters";
-			this.textBoxGuessedLetters.Size = new System.Drawing.Size(199, 26);
+			this.textBoxGuessedLetters.Size = new System.Drawing.Size(151, 26);
 			this.textBoxGuessedLetters.TabIndex = 4;
 			// 
 			// label3
@@ -205,7 +261,7 @@
 			// 
 			// btnGuess
 			// 
-			this.btnGuess.Location = new System.Drawing.Point(63, 288);
+			this.btnGuess.Location = new System.Drawing.Point(44, 289);
 			this.btnGuess.Name = "btnGuess";
 			this.btnGuess.Size = new System.Drawing.Size(75, 23);
 			this.btnGuess.TabIndex = 2;
@@ -219,7 +275,7 @@
 			this.pictureBoxHangman.Image = global::Hangman_Mk.I.Properties.Resources.hang0;
 			this.pictureBoxHangman.Location = new System.Drawing.Point(7, 45);
 			this.pictureBoxHangman.Name = "pictureBoxHangman";
-			this.pictureBoxHangman.Size = new System.Drawing.Size(337, 193);
+			this.pictureBoxHangman.Size = new System.Drawing.Size(289, 193);
 			this.pictureBoxHangman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxHangman.TabIndex = 1;
 			this.pictureBoxHangman.TabStop = false;
@@ -235,20 +291,329 @@
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Hangman";
 			// 
-			// lblResult
+			// letterW
 			// 
-			this.lblResult.AutoSize = true;
-			this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResult.Location = new System.Drawing.Point(11, 321);
-			this.lblResult.Name = "lblResult";
-			this.lblResult.Size = new System.Drawing.Size(0, 20);
-			this.lblResult.TabIndex = 9;
+			this.letterW.Location = new System.Drawing.Point(44, 344);
+			this.letterW.Name = "letterW";
+			this.letterW.Size = new System.Drawing.Size(23, 23);
+			this.letterW.TabIndex = 57;
+			this.letterW.TabStop = false;
+			this.letterW.Text = "W";
+			this.letterW.UseVisualStyleBackColor = true;
+			this.letterW.Click += new System.EventHandler(this.letterW_Click);
+			// 
+			// letterX
+			// 
+			this.letterX.Location = new System.Drawing.Point(60, 402);
+			this.letterX.Name = "letterX";
+			this.letterX.Size = new System.Drawing.Size(23, 23);
+			this.letterX.TabIndex = 56;
+			this.letterX.TabStop = false;
+			this.letterX.Text = "X";
+			this.letterX.UseVisualStyleBackColor = true;
+			this.letterX.Click += new System.EventHandler(this.letterX_Click);
+			// 
+			// letterU
+			// 
+			this.letterU.Location = new System.Drawing.Point(189, 344);
+			this.letterU.Name = "letterU";
+			this.letterU.Size = new System.Drawing.Size(23, 23);
+			this.letterU.TabIndex = 55;
+			this.letterU.TabStop = false;
+			this.letterU.Text = "U";
+			this.letterU.UseVisualStyleBackColor = true;
+			this.letterU.Click += new System.EventHandler(this.letterU_Click);
+			// 
+			// letterS
+			// 
+			this.letterS.Location = new System.Drawing.Point(51, 373);
+			this.letterS.Name = "letterS";
+			this.letterS.Size = new System.Drawing.Size(23, 23);
+			this.letterS.TabIndex = 54;
+			this.letterS.TabStop = false;
+			this.letterS.Text = "S";
+			this.letterS.UseVisualStyleBackColor = true;
+			this.letterS.Click += new System.EventHandler(this.letterS_Click);
+			// 
+			// letterR
+			// 
+			this.letterR.Location = new System.Drawing.Point(102, 344);
+			this.letterR.Name = "letterR";
+			this.letterR.Size = new System.Drawing.Size(23, 23);
+			this.letterR.TabIndex = 53;
+			this.letterR.TabStop = false;
+			this.letterR.Text = "R";
+			this.letterR.UseVisualStyleBackColor = true;
+			this.letterR.Click += new System.EventHandler(this.letterR_Click);
+			// 
+			// letterQ
+			// 
+			this.letterQ.Location = new System.Drawing.Point(15, 344);
+			this.letterQ.Name = "letterQ";
+			this.letterQ.Size = new System.Drawing.Size(23, 23);
+			this.letterQ.TabIndex = 52;
+			this.letterQ.TabStop = false;
+			this.letterQ.Text = "Q";
+			this.letterQ.UseVisualStyleBackColor = true;
+			this.letterQ.Click += new System.EventHandler(this.letterQ_Click);
+			// 
+			// letterP
+			// 
+			this.letterP.Location = new System.Drawing.Point(277, 344);
+			this.letterP.Name = "letterP";
+			this.letterP.Size = new System.Drawing.Size(23, 23);
+			this.letterP.TabIndex = 51;
+			this.letterP.TabStop = false;
+			this.letterP.Text = "P";
+			this.letterP.UseVisualStyleBackColor = true;
+			this.letterP.Click += new System.EventHandler(this.letterP_Click);
+			// 
+			// letterO
+			// 
+			this.letterO.Location = new System.Drawing.Point(248, 344);
+			this.letterO.Name = "letterO";
+			this.letterO.Size = new System.Drawing.Size(23, 23);
+			this.letterO.TabIndex = 50;
+			this.letterO.TabStop = false;
+			this.letterO.Text = "O";
+			this.letterO.UseVisualStyleBackColor = true;
+			this.letterO.Click += new System.EventHandler(this.letterO_Click);
+			// 
+			// letterN
+			// 
+			this.letterN.Location = new System.Drawing.Point(176, 402);
+			this.letterN.Name = "letterN";
+			this.letterN.Size = new System.Drawing.Size(23, 23);
+			this.letterN.TabIndex = 49;
+			this.letterN.TabStop = false;
+			this.letterN.Text = "N";
+			this.letterN.UseVisualStyleBackColor = true;
+			this.letterN.Click += new System.EventHandler(this.letterN_Click);
+			// 
+			// letterM
+			// 
+			this.letterM.Location = new System.Drawing.Point(205, 402);
+			this.letterM.Name = "letterM";
+			this.letterM.Size = new System.Drawing.Size(23, 23);
+			this.letterM.TabIndex = 48;
+			this.letterM.TabStop = false;
+			this.letterM.Text = "M";
+			this.letterM.UseVisualStyleBackColor = true;
+			this.letterM.Click += new System.EventHandler(this.letterM_Click);
+			// 
+			// letterL
+			// 
+			this.letterL.Location = new System.Drawing.Point(254, 373);
+			this.letterL.Name = "letterL";
+			this.letterL.Size = new System.Drawing.Size(23, 23);
+			this.letterL.TabIndex = 47;
+			this.letterL.TabStop = false;
+			this.letterL.Text = "L";
+			this.letterL.UseVisualStyleBackColor = true;
+			this.letterL.Click += new System.EventHandler(this.letterL_Click);
+			// 
+			// letterK
+			// 
+			this.letterK.Location = new System.Drawing.Point(225, 373);
+			this.letterK.Name = "letterK";
+			this.letterK.Size = new System.Drawing.Size(23, 23);
+			this.letterK.TabIndex = 46;
+			this.letterK.TabStop = false;
+			this.letterK.Text = "K";
+			this.letterK.UseVisualStyleBackColor = true;
+			this.letterK.Click += new System.EventHandler(this.letterK_Click);
+			// 
+			// letterJ
+			// 
+			this.letterJ.Location = new System.Drawing.Point(196, 373);
+			this.letterJ.Name = "letterJ";
+			this.letterJ.Size = new System.Drawing.Size(23, 23);
+			this.letterJ.TabIndex = 45;
+			this.letterJ.TabStop = false;
+			this.letterJ.Text = "J";
+			this.letterJ.UseVisualStyleBackColor = true;
+			this.letterJ.Click += new System.EventHandler(this.letterJ_Click);
+			// 
+			// letterI
+			// 
+			this.letterI.Location = new System.Drawing.Point(219, 344);
+			this.letterI.Name = "letterI";
+			this.letterI.Size = new System.Drawing.Size(23, 23);
+			this.letterI.TabIndex = 44;
+			this.letterI.TabStop = false;
+			this.letterI.Text = "I";
+			this.letterI.UseVisualStyleBackColor = true;
+			this.letterI.Click += new System.EventHandler(this.letterI_Click);
+			// 
+			// letterH
+			// 
+			this.letterH.Location = new System.Drawing.Point(167, 373);
+			this.letterH.Name = "letterH";
+			this.letterH.Size = new System.Drawing.Size(23, 23);
+			this.letterH.TabIndex = 43;
+			this.letterH.TabStop = false;
+			this.letterH.Text = "H";
+			this.letterH.UseVisualStyleBackColor = true;
+			this.letterH.Click += new System.EventHandler(this.letterH_Click);
+			// 
+			// letterG
+			// 
+			this.letterG.Location = new System.Drawing.Point(138, 373);
+			this.letterG.Name = "letterG";
+			this.letterG.Size = new System.Drawing.Size(23, 23);
+			this.letterG.TabIndex = 42;
+			this.letterG.TabStop = false;
+			this.letterG.Text = "G";
+			this.letterG.UseVisualStyleBackColor = true;
+			this.letterG.Click += new System.EventHandler(this.letterG_Click);
+			// 
+			// letterF
+			// 
+			this.letterF.Location = new System.Drawing.Point(109, 373);
+			this.letterF.Name = "letterF";
+			this.letterF.Size = new System.Drawing.Size(23, 23);
+			this.letterF.TabIndex = 41;
+			this.letterF.TabStop = false;
+			this.letterF.Text = "F";
+			this.letterF.UseVisualStyleBackColor = true;
+			this.letterF.Click += new System.EventHandler(this.letterF_Click);
+			// 
+			// letterE
+			// 
+			this.letterE.Location = new System.Drawing.Point(73, 344);
+			this.letterE.Name = "letterE";
+			this.letterE.Size = new System.Drawing.Size(23, 23);
+			this.letterE.TabIndex = 40;
+			this.letterE.TabStop = false;
+			this.letterE.Text = "E";
+			this.letterE.UseVisualStyleBackColor = true;
+			this.letterE.Click += new System.EventHandler(this.letterE_Click);
+			// 
+			// letterD
+			// 
+			this.letterD.Location = new System.Drawing.Point(80, 373);
+			this.letterD.Name = "letterD";
+			this.letterD.Size = new System.Drawing.Size(23, 23);
+			this.letterD.TabIndex = 39;
+			this.letterD.TabStop = false;
+			this.letterD.Text = "D";
+			this.letterD.UseVisualStyleBackColor = true;
+			this.letterD.Click += new System.EventHandler(this.letterD_Click);
+			// 
+			// letterB
+			// 
+			this.letterB.Location = new System.Drawing.Point(147, 402);
+			this.letterB.Name = "letterB";
+			this.letterB.Size = new System.Drawing.Size(23, 23);
+			this.letterB.TabIndex = 38;
+			this.letterB.TabStop = false;
+			this.letterB.Text = "B";
+			this.letterB.UseVisualStyleBackColor = true;
+			this.letterB.Click += new System.EventHandler(this.letterB_Click);
+			// 
+			// letterZ
+			// 
+			this.letterZ.Location = new System.Drawing.Point(31, 402);
+			this.letterZ.Name = "letterZ";
+			this.letterZ.Size = new System.Drawing.Size(23, 23);
+			this.letterZ.TabIndex = 37;
+			this.letterZ.TabStop = false;
+			this.letterZ.Text = "Z";
+			this.letterZ.UseVisualStyleBackColor = true;
+			this.letterZ.Click += new System.EventHandler(this.letterZ_Click);
+			// 
+			// letterY
+			// 
+			this.letterY.Location = new System.Drawing.Point(160, 344);
+			this.letterY.Name = "letterY";
+			this.letterY.Size = new System.Drawing.Size(23, 23);
+			this.letterY.TabIndex = 36;
+			this.letterY.TabStop = false;
+			this.letterY.Text = "Y";
+			this.letterY.UseVisualStyleBackColor = true;
+			this.letterY.Click += new System.EventHandler(this.letterY_Click);
+			// 
+			// letterV
+			// 
+			this.letterV.Location = new System.Drawing.Point(118, 402);
+			this.letterV.Name = "letterV";
+			this.letterV.Size = new System.Drawing.Size(23, 23);
+			this.letterV.TabIndex = 35;
+			this.letterV.TabStop = false;
+			this.letterV.Text = "V";
+			this.letterV.UseVisualStyleBackColor = true;
+			this.letterV.Click += new System.EventHandler(this.letterV_Click);
+			// 
+			// letterC
+			// 
+			this.letterC.Location = new System.Drawing.Point(89, 402);
+			this.letterC.Name = "letterC";
+			this.letterC.Size = new System.Drawing.Size(23, 23);
+			this.letterC.TabIndex = 34;
+			this.letterC.TabStop = false;
+			this.letterC.Text = "C";
+			this.letterC.UseVisualStyleBackColor = true;
+			this.letterC.Click += new System.EventHandler(this.letterC_Click);
+			// 
+			// letterT
+			// 
+			this.letterT.Location = new System.Drawing.Point(131, 344);
+			this.letterT.Name = "letterT";
+			this.letterT.Size = new System.Drawing.Size(23, 23);
+			this.letterT.TabIndex = 33;
+			this.letterT.TabStop = false;
+			this.letterT.Text = "T";
+			this.letterT.UseVisualStyleBackColor = true;
+			this.letterT.Click += new System.EventHandler(this.letterT_Click);
+			// 
+			// letterA
+			// 
+			this.letterA.Location = new System.Drawing.Point(22, 373);
+			this.letterA.Name = "letterA";
+			this.letterA.Size = new System.Drawing.Size(23, 23);
+			this.letterA.TabIndex = 32;
+			this.letterA.TabStop = false;
+			this.letterA.Text = "A";
+			this.letterA.UseVisualStyleBackColor = true;
+			this.letterA.Click += new System.EventHandler(this.letterA_Click);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(141, 286);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(45, 20);
+			this.label4.TabIndex = 58;
+			this.label4.Text = "Lives";
+			// 
+			// letterDecimal
+			// 
+			this.letterDecimal.Location = new System.Drawing.Point(263, 402);
+			this.letterDecimal.Name = "letterDecimal";
+			this.letterDecimal.Size = new System.Drawing.Size(23, 23);
+			this.letterDecimal.TabIndex = 59;
+			this.letterDecimal.TabStop = false;
+			this.letterDecimal.Text = ".";
+			this.letterDecimal.UseVisualStyleBackColor = true;
+			this.letterDecimal.Click += new System.EventHandler(this.letterDecimal_Click);
+			// 
+			// letterComma
+			// 
+			this.letterComma.Location = new System.Drawing.Point(234, 402);
+			this.letterComma.Name = "letterComma";
+			this.letterComma.Size = new System.Drawing.Size(23, 23);
+			this.letterComma.TabIndex = 60;
+			this.letterComma.TabStop = false;
+			this.letterComma.Text = ",";
+			this.letterComma.UseVisualStyleBackColor = true;
+			this.letterComma.Click += new System.EventHandler(this.letterComma_Click);
 			// 
 			// frmHangman
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(384, 521);
+			this.ClientSize = new System.Drawing.Size(511, 643);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.tabControl1);
 			this.Name = "frmHangman";
@@ -279,9 +644,37 @@
         private System.Windows.Forms.Button btnGuess;
         private System.Windows.Forms.PictureBox pictureBoxHangman;
         private System.Windows.Forms.TextBox textBoxLives;
-        private System.Windows.Forms.Label lblWord;
-        private System.Windows.Forms.Label lblDashes;
+		private System.Windows.Forms.Label lblWord;
 		private System.Windows.Forms.Label lblResult;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Button letterW;
+		private System.Windows.Forms.Button letterX;
+		private System.Windows.Forms.Button letterU;
+		private System.Windows.Forms.Button letterS;
+		private System.Windows.Forms.Button letterR;
+		private System.Windows.Forms.Button letterQ;
+		private System.Windows.Forms.Button letterP;
+		private System.Windows.Forms.Button letterO;
+		private System.Windows.Forms.Button letterN;
+		private System.Windows.Forms.Button letterM;
+		private System.Windows.Forms.Button letterL;
+		private System.Windows.Forms.Button letterK;
+		private System.Windows.Forms.Button letterJ;
+		private System.Windows.Forms.Button letterI;
+		private System.Windows.Forms.Button letterH;
+		private System.Windows.Forms.Button letterG;
+		private System.Windows.Forms.Button letterF;
+		private System.Windows.Forms.Button letterE;
+		private System.Windows.Forms.Button letterD;
+		private System.Windows.Forms.Button letterB;
+		private System.Windows.Forms.Button letterZ;
+		private System.Windows.Forms.Button letterY;
+		private System.Windows.Forms.Button letterV;
+		private System.Windows.Forms.Button letterC;
+		private System.Windows.Forms.Button letterT;
+		private System.Windows.Forms.Button letterA;
+		private System.Windows.Forms.Button letterComma;
+		private System.Windows.Forms.Button letterDecimal;
 
     }
 }
