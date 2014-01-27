@@ -85,7 +85,7 @@
 			this.tabControl1.Location = new System.Drawing.Point(12, 49);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(311, 432);
+			this.tabControl1.Size = new System.Drawing.Size(311, 450);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPageHangman
@@ -201,14 +201,14 @@
 			this.tabPageLanguage.Location = new System.Drawing.Point(4, 22);
 			this.tabPageLanguage.Name = "tabPageLanguage";
 			this.tabPageLanguage.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPageLanguage.Size = new System.Drawing.Size(303, 406);
+			this.tabPageLanguage.Size = new System.Drawing.Size(303, 424);
 			this.tabPageLanguage.TabIndex = 0;
 			this.tabPageLanguage.Text = "Hangman";
 			this.tabPageLanguage.UseVisualStyleBackColor = true;
 			// 
 			// letterComma
 			// 
-			this.letterComma.Location = new System.Drawing.Point(234, 379);
+			this.letterComma.Location = new System.Drawing.Point(234, 396);
 			this.letterComma.Name = "letterComma";
 			this.letterComma.Size = new System.Drawing.Size(23, 23);
 			this.letterComma.TabIndex = 60;
@@ -219,7 +219,7 @@
 			// 
 			// letterDecimal
 			// 
-			this.letterDecimal.Location = new System.Drawing.Point(263, 379);
+			this.letterDecimal.Location = new System.Drawing.Point(263, 396);
 			this.letterDecimal.Name = "letterDecimal";
 			this.letterDecimal.Size = new System.Drawing.Size(23, 23);
 			this.letterDecimal.TabIndex = 59;
@@ -240,7 +240,7 @@
 			// 
 			// letterW
 			// 
-			this.letterW.Location = new System.Drawing.Point(44, 321);
+			this.letterW.Location = new System.Drawing.Point(44, 338);
 			this.letterW.Name = "letterW";
 			this.letterW.Size = new System.Drawing.Size(23, 23);
 			this.letterW.TabIndex = 57;
@@ -251,7 +251,7 @@
 			// 
 			// letterX
 			// 
-			this.letterX.Location = new System.Drawing.Point(60, 379);
+			this.letterX.Location = new System.Drawing.Point(60, 396);
 			this.letterX.Name = "letterX";
 			this.letterX.Size = new System.Drawing.Size(23, 23);
 			this.letterX.TabIndex = 56;
@@ -272,7 +272,7 @@
 			// 
 			// letterU
 			// 
-			this.letterU.Location = new System.Drawing.Point(189, 321);
+			this.letterU.Location = new System.Drawing.Point(189, 338);
 			this.letterU.Name = "letterU";
 			this.letterU.Size = new System.Drawing.Size(23, 23);
 			this.letterU.TabIndex = 55;
@@ -306,7 +306,7 @@
 			// 
 			// letterS
 			// 
-			this.letterS.Location = new System.Drawing.Point(51, 350);
+			this.letterS.Location = new System.Drawing.Point(51, 367);
 			this.letterS.Name = "letterS";
 			this.letterS.Size = new System.Drawing.Size(23, 23);
 			this.letterS.TabIndex = 54;
@@ -317,7 +317,7 @@
 			// 
 			// letterR
 			// 
-			this.letterR.Location = new System.Drawing.Point(102, 321);
+			this.letterR.Location = new System.Drawing.Point(102, 338);
 			this.letterR.Name = "letterR";
 			this.letterR.Size = new System.Drawing.Size(23, 23);
 			this.letterR.TabIndex = 53;
@@ -328,7 +328,7 @@
 			// 
 			// letterQ
 			// 
-			this.letterQ.Location = new System.Drawing.Point(15, 321);
+			this.letterQ.Location = new System.Drawing.Point(15, 338);
 			this.letterQ.Name = "letterQ";
 			this.letterQ.Size = new System.Drawing.Size(23, 23);
 			this.letterQ.TabIndex = 52;
@@ -339,7 +339,7 @@
 			// 
 			// letterP
 			// 
-			this.letterP.Location = new System.Drawing.Point(277, 321);
+			this.letterP.Location = new System.Drawing.Point(277, 338);
 			this.letterP.Name = "letterP";
 			this.letterP.Size = new System.Drawing.Size(23, 23);
 			this.letterP.TabIndex = 51;
@@ -350,7 +350,7 @@
 			// 
 			// letterO
 			// 
-			this.letterO.Location = new System.Drawing.Point(248, 321);
+			this.letterO.Location = new System.Drawing.Point(248, 338);
 			this.letterO.Name = "letterO";
 			this.letterO.Size = new System.Drawing.Size(23, 23);
 			this.letterO.TabIndex = 50;
@@ -361,7 +361,7 @@
 			// 
 			// letterN
 			// 
-			this.letterN.Location = new System.Drawing.Point(176, 379);
+			this.letterN.Location = new System.Drawing.Point(176, 396);
 			this.letterN.Name = "letterN";
 			this.letterN.Size = new System.Drawing.Size(23, 23);
 			this.letterN.TabIndex = 49;
@@ -372,7 +372,7 @@
 			// 
 			// letterM
 			// 
-			this.letterM.Location = new System.Drawing.Point(205, 379);
+			this.letterM.Location = new System.Drawing.Point(205, 396);
 			this.letterM.Name = "letterM";
 			this.letterM.Size = new System.Drawing.Size(23, 23);
 			this.letterM.TabIndex = 48;
@@ -383,7 +383,7 @@
 			// 
 			// letterL
 			// 
-			this.letterL.Location = new System.Drawing.Point(254, 350);
+			this.letterL.Location = new System.Drawing.Point(254, 367);
 			this.letterL.Name = "letterL";
 			this.letterL.Size = new System.Drawing.Size(23, 23);
 			this.letterL.TabIndex = 47;
@@ -394,7 +394,7 @@
 			// 
 			// letterK
 			// 
-			this.letterK.Location = new System.Drawing.Point(225, 350);
+			this.letterK.Location = new System.Drawing.Point(225, 367);
 			this.letterK.Name = "letterK";
 			this.letterK.Size = new System.Drawing.Size(23, 23);
 			this.letterK.TabIndex = 46;
@@ -405,7 +405,7 @@
 			// 
 			// letterJ
 			// 
-			this.letterJ.Location = new System.Drawing.Point(196, 350);
+			this.letterJ.Location = new System.Drawing.Point(196, 367);
 			this.letterJ.Name = "letterJ";
 			this.letterJ.Size = new System.Drawing.Size(23, 23);
 			this.letterJ.TabIndex = 45;
@@ -416,7 +416,7 @@
 			// 
 			// letterI
 			// 
-			this.letterI.Location = new System.Drawing.Point(219, 321);
+			this.letterI.Location = new System.Drawing.Point(219, 338);
 			this.letterI.Name = "letterI";
 			this.letterI.Size = new System.Drawing.Size(23, 23);
 			this.letterI.TabIndex = 44;
@@ -427,7 +427,7 @@
 			// 
 			// letterH
 			// 
-			this.letterH.Location = new System.Drawing.Point(167, 350);
+			this.letterH.Location = new System.Drawing.Point(167, 367);
 			this.letterH.Name = "letterH";
 			this.letterH.Size = new System.Drawing.Size(23, 23);
 			this.letterH.TabIndex = 43;
@@ -438,7 +438,7 @@
 			// 
 			// letterG
 			// 
-			this.letterG.Location = new System.Drawing.Point(138, 350);
+			this.letterG.Location = new System.Drawing.Point(138, 367);
 			this.letterG.Name = "letterG";
 			this.letterG.Size = new System.Drawing.Size(23, 23);
 			this.letterG.TabIndex = 42;
@@ -449,7 +449,7 @@
 			// 
 			// letterF
 			// 
-			this.letterF.Location = new System.Drawing.Point(109, 350);
+			this.letterF.Location = new System.Drawing.Point(109, 367);
 			this.letterF.Name = "letterF";
 			this.letterF.Size = new System.Drawing.Size(23, 23);
 			this.letterF.TabIndex = 41;
@@ -460,7 +460,7 @@
 			// 
 			// letterE
 			// 
-			this.letterE.Location = new System.Drawing.Point(73, 321);
+			this.letterE.Location = new System.Drawing.Point(73, 338);
 			this.letterE.Name = "letterE";
 			this.letterE.Size = new System.Drawing.Size(23, 23);
 			this.letterE.TabIndex = 40;
@@ -471,7 +471,7 @@
 			// 
 			// letterD
 			// 
-			this.letterD.Location = new System.Drawing.Point(80, 350);
+			this.letterD.Location = new System.Drawing.Point(80, 367);
 			this.letterD.Name = "letterD";
 			this.letterD.Size = new System.Drawing.Size(23, 23);
 			this.letterD.TabIndex = 39;
@@ -482,7 +482,7 @@
 			// 
 			// letterB
 			// 
-			this.letterB.Location = new System.Drawing.Point(147, 379);
+			this.letterB.Location = new System.Drawing.Point(147, 396);
 			this.letterB.Name = "letterB";
 			this.letterB.Size = new System.Drawing.Size(23, 23);
 			this.letterB.TabIndex = 38;
@@ -493,7 +493,7 @@
 			// 
 			// letterZ
 			// 
-			this.letterZ.Location = new System.Drawing.Point(31, 379);
+			this.letterZ.Location = new System.Drawing.Point(31, 396);
 			this.letterZ.Name = "letterZ";
 			this.letterZ.Size = new System.Drawing.Size(23, 23);
 			this.letterZ.TabIndex = 37;
@@ -504,7 +504,7 @@
 			// 
 			// letterY
 			// 
-			this.letterY.Location = new System.Drawing.Point(160, 321);
+			this.letterY.Location = new System.Drawing.Point(160, 338);
 			this.letterY.Name = "letterY";
 			this.letterY.Size = new System.Drawing.Size(23, 23);
 			this.letterY.TabIndex = 36;
@@ -515,7 +515,7 @@
 			// 
 			// letterV
 			// 
-			this.letterV.Location = new System.Drawing.Point(118, 379);
+			this.letterV.Location = new System.Drawing.Point(118, 396);
 			this.letterV.Name = "letterV";
 			this.letterV.Size = new System.Drawing.Size(23, 23);
 			this.letterV.TabIndex = 35;
@@ -526,7 +526,7 @@
 			// 
 			// letterC
 			// 
-			this.letterC.Location = new System.Drawing.Point(89, 379);
+			this.letterC.Location = new System.Drawing.Point(89, 396);
 			this.letterC.Name = "letterC";
 			this.letterC.Size = new System.Drawing.Size(23, 23);
 			this.letterC.TabIndex = 34;
@@ -537,7 +537,7 @@
 			// 
 			// letterT
 			// 
-			this.letterT.Location = new System.Drawing.Point(131, 321);
+			this.letterT.Location = new System.Drawing.Point(131, 338);
 			this.letterT.Name = "letterT";
 			this.letterT.Size = new System.Drawing.Size(23, 23);
 			this.letterT.TabIndex = 33;
@@ -548,7 +548,7 @@
 			// 
 			// letterA
 			// 
-			this.letterA.Location = new System.Drawing.Point(22, 350);
+			this.letterA.Location = new System.Drawing.Point(22, 367);
 			this.letterA.Name = "letterA";
 			this.letterA.Size = new System.Drawing.Size(23, 23);
 			this.letterA.TabIndex = 32;
@@ -561,10 +561,11 @@
 			// 
 			this.lblResult.AutoSize = true;
 			this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResult.Location = new System.Drawing.Point(11, 321);
+			this.lblResult.Location = new System.Drawing.Point(6, 315);
 			this.lblResult.Name = "lblResult";
-			this.lblResult.Size = new System.Drawing.Size(0, 20);
+			this.lblResult.Size = new System.Drawing.Size(92, 20);
 			this.lblResult.TabIndex = 9;
+			this.lblResult.Text = "Placeholder";
 			// 
 			// lblWord
 			// 
@@ -572,8 +573,9 @@
 			this.lblWord.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblWord.Location = new System.Drawing.Point(11, 3);
 			this.lblWord.Name = "lblWord";
-			this.lblWord.Size = new System.Drawing.Size(0, 30);
+			this.lblWord.Size = new System.Drawing.Size(189, 30);
 			this.lblWord.TabIndex = 8;
+			this.lblWord.Text = "Placeholder";
 			// 
 			// textBoxGuessedLetters
 			// 
@@ -622,7 +624,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(330, 485);
+			this.ClientSize = new System.Drawing.Size(330, 505);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.tabControl1);
 			this.Name = "frmHangman";

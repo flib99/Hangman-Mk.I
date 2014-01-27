@@ -1,4 +1,5 @@
-﻿using System;
+﻿//(c) Copyright Josh Walls 2014. All Rights Reserved.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,8 @@ namespace Hangman_Mk.I
             InitializeComponent();
 
             comboBoxLanguage.SelectedItem = "Debug";
+			lblResult.Text = "";
+			lblWord.Text = "";
         }
 
         string word;
@@ -33,7 +36,6 @@ namespace Hangman_Mk.I
         int randomNumber;
         string[] words = new string[] { };
         char[] wordArray = new char[] { };
-		char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
 		string wordCurrentGuess;
 
         private void btnLanguageGo_Click(object sender, EventArgs e)
@@ -184,6 +186,8 @@ namespace Hangman_Mk.I
                 MessageBox.Show("Sorry, we don't have that language" + "\n" + "Select one from the list");
             }
 
+			
+
 			for (int i = 0; i < words.Length; i++)
 			{
 				words[i] = words[i].ToUpper();
@@ -195,7 +199,7 @@ namespace Hangman_Mk.I
 
 			if (result == DialogResult.Yes)
 			{
-				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word);
+				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
 			}
 
             wordArray = word.ToCharArray();
@@ -358,7 +362,7 @@ namespace Hangman_Mk.I
 
 		private void letterS_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "S";
 		}
 
 		private void letterR_Click(object sender, EventArgs e)
