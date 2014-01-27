@@ -332,17 +332,17 @@ namespace Hangman_Mk.I
 
 		private void letterComma_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = ",";
 		}
 
 		private void letterX_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "X";
 		}
 
 		private void letterU_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "U";
 		}
 
 		private void letterS_Click(object sender, EventArgs e)
@@ -352,112 +352,112 @@ namespace Hangman_Mk.I
 
 		private void letterR_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "R";
 		}
 
 		private void letterQ_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "Q";
 		}
 
 		private void letterP_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "P";
 		}
 
 		private void letterO_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "O";
 		}
 
 		private void letterN_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "N";
 		}
 
 		private void letterM_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "M";
 		}
 
 		private void letterL_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "L";
 		}
 
 		private void letterK_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "K";
 		}
 
 		private void letterJ_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "J";
 		}
 
 		private void letterI_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "I";
 		}
 
 		private void letterH_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "H";
 		}
 
 		private void letterG_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "G";
 		}
 
 		private void letterF_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "F";
 		}
 
 		private void letterE_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "E";
 		}
 
 		private void letterD_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "D";
 		}
 
 		private void letterB_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "B";
 		}
 
 		private void letterZ_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "Z";
 		}
 
 		private void letterY_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "Y";
 		}
 
 		private void letterV_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "V";
 		}
 
 		private void letterC_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "C";
 		}
 
 		private void letterT_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "T";
 		}
 
 		private void letterA_Click(object sender, EventArgs e)
 		{
-			textBoxGuess.Text = "";
+			textBoxGuess.Text = "A";
 		}
 
         
