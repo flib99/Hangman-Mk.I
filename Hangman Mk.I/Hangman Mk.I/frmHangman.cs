@@ -473,6 +473,51 @@ namespace Hangman_Mk.I
 		private void letterA_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "A";
+		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+			SaveFileDialog save = new SaveFileDialog();
+			save.FileName = textBoxNewWordSetName.Text + ".hangmanDictionary";
+			save.Filter = "Hangman Dictionary File | *.hangmanDictionary";
+			if (save.ShowDialog() == DialogResult.OK)
+			{
+				string saveFileName = save.FileName;
+
+				File.WriteAllLines(saveFileName, richTextBoxNewWordSet.Lines);
+			}
+			
+		}
+
+		private void btnOpen_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog open = new OpenFileDialog();
+			open.ShowDialog();
+			open.Filter = "Hangman Dictionary File | *.hangmanDictionary | All Files | *.*";
+			open.FilterIndex = 1;
+
+			words = File.ReadAllLines(open.FileName);
+
+			for (int i = 0; i < words.Length; i++)
+			{
+				words[i] = words[i].ToUpper();
+			}
+
+			Random random = new Random();
+			randomNumber = random.Next(0, wordsLength);
+			word = words[randomNumber];
+
+			if (result == DialogResult.Yes)
+			{
+				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
+			}
+
+			wordArray = word.ToCharArray();
+
+			foreach (char c in word)
+			{
+				lblWord.Text += "*";
+			}
 		}   
     }
 }
