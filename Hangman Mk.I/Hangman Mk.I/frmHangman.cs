@@ -14,11 +14,16 @@ namespace Hangman_Mk.I
 {
     public partial class frmHangman : Form
     {
+			DialogResult result = MessageBox.Show(
+				"Do you want to enable cheat mode?",
+				"Cheat Mode",
+				MessageBoxButtons.YesNo);
+
         public frmHangman()
         {
             InitializeComponent();
 
-            comboBoxLanguage.SelectedItem = "Debug";     
+            comboBoxLanguage.SelectedItem = "Debug";
         }
 
         string word;
@@ -188,22 +193,17 @@ namespace Hangman_Mk.I
             randomNumber = random.Next(0, wordsLength);
             word = words[randomNumber];
 
-            Console.WriteLine(wordsLength + " " + randomNumber + " " + word);
+			if (result == DialogResult.Yes)
+			{
+				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word);
+			}
 
             wordArray = word.ToCharArray();
-
-            foreach(char c in wordArray)
-            {
-                Console.WriteLine(c);
-            }
 
             foreach(char c in word)
             {
                 lblWord.Text += "*";
             }
-
-            
-
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
@@ -221,8 +221,6 @@ namespace Hangman_Mk.I
 				int counter = 0;
 				int foundLen = 0;
 				string newChar = "";
-
-				
 
 				for (int i = 0; i < word.Length; i++)
 				{
@@ -243,8 +241,26 @@ namespace Hangman_Mk.I
 
 				lblWord.Text = wordCurrentGuess;
 
-				
-				
+				if (lblWord.Text.Contains("*") == false)
+				{
+					DialogResult playAgainResult = MessageBox.Show(
+						"Congratulations, you won!\nDo you want to play again?",
+						"Congratulations!",
+						MessageBoxButtons.YesNo);
+					if(playAgainResult == DialogResult.Yes)
+					{
+						lives = 10;
+						word = "";
+						textBoxGuessedLetters.Text = "";
+						textBoxGuess.Text = "";
+						tabControl1.SelectedIndex = 0;
+						lblWord.Text = "";
+					}
+					else
+					{
+						Application.Exit();
+					}
+				}
             }
             else
             {
@@ -263,24 +279,20 @@ namespace Hangman_Mk.I
                             "You're Dead!"
                         );
 
-                        DialogResult result = MessageBox.Show(
+                        DialogResult playAgainResult = MessageBox.Show(
                             "Do you want to play again?", 
                             "Play again", 
                             MessageBoxButtons.YesNo
                         );
 
-                        if(result == DialogResult.Yes)
+                        if(playAgainResult == DialogResult.Yes)
                         {
                             lives = 10;
                             word = "";
                             textBoxGuessedLetters.Text = "";
                             textBoxGuess.Text = "";
                             tabControl1.SelectedIndex = 0;
-
-                            foreach(char c in wordArray)
-                            {
-                                Console.WriteLine(c);
-                            }
+							lblWord.Text = "";  
                         }
                         else
                         {
@@ -318,7 +330,6 @@ namespace Hangman_Mk.I
                 textBoxLives.Text = Convert.ToString(lives);
             }
         }
-
 
 		private void letterW_Click(object sender, EventArgs e)
 		{
@@ -458,10 +469,6 @@ namespace Hangman_Mk.I
 		private void letterA_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "A";
-		}
-
-        
-
-        
+		}   
     }
 }
