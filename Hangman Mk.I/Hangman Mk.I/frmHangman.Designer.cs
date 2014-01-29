@@ -713,7 +713,7 @@
 			this.label1.AutoSize = true;
 			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(13, 13);
+			this.label1.Location = new System.Drawing.Point(13, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(141, 33);
 			this.label1.TabIndex = 1;

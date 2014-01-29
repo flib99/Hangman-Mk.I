@@ -1,15 +1,9 @@
 ﻿//(c) Copyright Josh Walls 2014. All Rights Reserved.
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Security.Cryptography;
 
 namespace Hangman_Mk.I
 {
@@ -27,7 +21,7 @@ namespace Hangman_Mk.I
             comboBoxLanguage.SelectedItem = "Debug";
 			lblResult.Text = "";
 			lblWord.Text = "";
-        }
+		}
 
         string word;
         int wordsLength;
