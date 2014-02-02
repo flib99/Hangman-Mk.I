@@ -193,7 +193,7 @@ namespace Hangman_Mk.I
 
 			if (result == DialogResult.Yes)
 			{
-				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
+				MessageBox.Show("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
 			}
 
             wordArray = word.ToCharArray();
@@ -202,6 +202,8 @@ namespace Hangman_Mk.I
             {
                 lblWord.Text += "*";
             }
+
+			tabControl1.SelectedIndex = 1;
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
@@ -217,19 +219,19 @@ namespace Hangman_Mk.I
 
 				int result = 0;
 				int counter = 0;
-				int foundLen = 0;
+				int foundLenght = 0;
 				string newChar = "";
 
 				for (int i = 0; i < word.Length; i++)
 				{
-					result = word.IndexOf(guess, foundLen, word.Length - foundLen);
+					result = word.IndexOf(guess, foundLenght, word.Length - foundLenght);
 
 					if (result != -1)
 					{
-						foundLen = result + 1;
+						foundLenght = result + 1;
 						counter++;
 
-						newChar = word.Substring((result), 1);   //grab the letter to be replaced
+						newChar = word.Substring(result, 1);   //grab the letter to be replaced
 
 						wordCurrentGuess = wordCurrentGuess.Remove(result, 1);              //Remove the * character at this position
 
@@ -328,145 +330,173 @@ namespace Hangman_Mk.I
                 textBoxLives.Text = Convert.ToString(lives);
             }
         }
-
+		
 		private void letterW_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "W";
+			letterW.Enabled = false;
 		}
 
 		private void letterDecimal_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = ".";
+			letterDecimal.Enabled = false;
 		}
 
 		private void letterComma_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = ",";
+			letterComma.Enabled = false;
 		}
 
 		private void letterX_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "X";
+			letterX.Enabled = false;
 		}
 
 		private void letterU_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "U";
+			letterU.Enabled = false;
 		}
 
 		private void letterS_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "S";
+			letterS.Enabled = false;
 		}
 
 		private void letterR_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "R";
+			letterR.Enabled = false;
 		}
 
 		private void letterQ_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "Q";
+			letterQ.Enabled = false;
 		}
 
 		private void letterP_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "P";
+			letterP.Enabled = false;
 		}
 
 		private void letterO_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "O";
+			letterO.Enabled = false;
 		}
 
 		private void letterN_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "N";
+			letterN.Enabled = false;
 		}
 
 		private void letterM_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "M";
+			letterM.Enabled = false;
 		}
 
 		private void letterL_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "L";
+			letterL.Enabled = false;
 		}
 
 		private void letterK_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "K";
+			letterK.Enabled = false;
 		}
 
 		private void letterJ_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "J";
+			letterJ.Enabled = false;
 		}
 
 		private void letterI_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "I";
+			letterI.Enabled = false;
 		}
 
 		private void letterH_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "H";
+			letterH.Enabled = false;
 		}
 
 		private void letterG_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "G";
+			letterG.Enabled = false;
 		}
 
 		private void letterF_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "F";
+			letterF.Enabled = false;
 		}
 
 		private void letterE_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "E";
+			letterE.Enabled = false;
 		}
 
 		private void letterD_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "D";
+			letterD.Enabled = false;
 		}
 
 		private void letterB_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "B";
+			letterB.Enabled = false;
 		}
 
 		private void letterZ_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "Z";
+			letterZ.Enabled = false;
 		}
 
 		private void letterY_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "Y";
+			letterY.Enabled = false;
 		}
 
 		private void letterV_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "V";
+			letterV.Enabled = false;
 		}
 
 		private void letterC_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "C";
+			letterC.Enabled = false;
 		}
 
 		private void letterT_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "T";
+			letterW.Enabled = false;
 		}
 
 		private void letterA_Click(object sender, EventArgs e)
 		{
 			textBoxGuess.Text = "A";
+			letterA.Enabled = false;
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
@@ -486,31 +516,33 @@ namespace Hangman_Mk.I
 		private void btnOpen_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog open = new OpenFileDialog();
-			open.ShowDialog();
-			open.Filter = "Hangman Dictionary File | *.hangmanDictionary | All Files | *.*";
+			open.Filter = "Hangman Dictionary File|*.hangmanDictionary|All Files|*.*";
 			open.FilterIndex = 1;
 
-			words = File.ReadAllLines(open.FileName);
-
-			for (int i = 0; i < words.Length; i++)
+			if (open.ShowDialog() == DialogResult.OK)
 			{
-				words[i] = words[i].ToUpper();
-			}
+				words = File.ReadAllLines(open.FileName);
 
-			Random random = new Random();
-			randomNumber = random.Next(0, wordsLength);
-			word = words[randomNumber];
+				for (int i = 0; i < words.Length; i++)
+				{
+					words[i] = words[i].ToUpper();
+				}
 
-			if (result == DialogResult.Yes)
-			{
-				Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
-			}
+				Random random = new Random();
+				randomNumber = random.Next(0, wordsLength);
+				word = words[randomNumber];
 
-			wordArray = word.ToCharArray();
+				if (result == DialogResult.Yes)
+				{
+					Console.Write("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
+				}
 
-			foreach (char c in word)
-			{
-				lblWord.Text += "*";
+				wordArray = word.ToCharArray();
+
+				foreach (char c in word)
+				{
+					lblWord.Text += "*";
+				}
 			}
 		}   
     }
