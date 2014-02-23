@@ -9,7 +9,7 @@ namespace Hangman_Mk.I
 {
     public partial class frmHangman : Form
     {
-			DialogResult result = MessageBox.Show(
+			DialogResult result = MessageBox.Show(			//Option to enable cheat mode. Useful for debugging
 				"Do you want to enable cheat mode?",
 				"Cheat Mode",
 				MessageBoxButtons.YesNo);
@@ -18,26 +18,26 @@ namespace Hangman_Mk.I
         {
             InitializeComponent();
 
-            comboBoxLanguage.SelectedItem = "Debug";
-			lblResult.Text = "";
+            comboBoxLanguage.SelectedItem = "English";		//Sets the default language to English
+			lblResult.Text = "";		//Removes 'Placeholder' from the dynamic labels
 			lblWord.Text = "";
 		}
 
-        string word;
-        int wordsLength;
-        int lives = 10;
-        char guess;
-        int randomNumber;
-        string[] words = new string[] { };
-        char[] wordArray = new char[] { };
-		string wordCurrentGuess;
+        string word;		//The word to be guessed
+        int wordsLength;		//The lenght of said word
+        int lives = 10;		//Number of lives. I know it asks for 6 in the question but I feel 10 lives is better as it is incredibly difficult to win on 6 lives. Also the images I have dipicting the hangman's noose, there are 10 of them.
+        char guess;		//The character that has just been guessed
+        int randomNumber;		//Random number genorated to select the word
+        string[] words = new string[] { };		//Array holding the dictionary
+        char[] wordArray = new char[] { };		//The word to be guessed in a char array
+		string wordCurrentGuess;		//The word with the stars representing letters
 
-        private void btnLanguageGo_Click(object sender, EventArgs e)
+        private void btnLanguageGo_Click(object sender, EventArgs e)		//The go button on first tab
         {
-            if (comboBoxLanguage.Text == "Debug")
+            if (comboBoxLanguage.Text == "Debug")		//If the selected language is Debug (small dictionary for debugging purpouses). Same for every language
             {
-                words = File.ReadAllLines("Resources/debug.txt");
-                wordsLength = words.Length;
+                words = File.ReadAllLines("Resources/debug.txt");		//Reads all the lines of the dictionary into the word array
+                wordsLength = words.Length;		//Finds the lenght of the word
             }
             else if (comboBoxLanguage.Text == "Afrikaans")
             {
@@ -177,61 +177,59 @@ namespace Hangman_Mk.I
             }
             else
             {
-                MessageBox.Show("Sorry, we don't have that language" + "\n" + "Select one from the list");
+                MessageBox.Show("Sorry, we don't have that language" + "\n" + "Select one from the list");		//If the langauge slected dosen't exist.
             }
 
 			
 
-			for (int i = 0; i < words.Length; i++)
+			for (int i = 0; i < words.Length; i++)		//For every index in the word array
 			{
-				words[i] = words[i].ToUpper();
+				words[i] = words[i].ToUpper();		//Converts each index to uppercase
 			}
 
-            Random random = new Random();
-            randomNumber = random.Next(0, wordsLength);
-            word = words[randomNumber];
+            Random random = new Random();		//Declare new instance of Random called random
+            randomNumber = random.Next(0, wordsLength);		//Genorates a new random number
+            word = words[randomNumber];		//Selects the word at the index of the random number and stores it in word
 
-			if (result == DialogResult.Yes)
+			if (result == DialogResult.Yes)		//If cheat mode is enabled
 			{
-				MessageBox.Show("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");
+				MessageBox.Show("dictionary lenght: " + wordsLength + "\nrandom number selected: " + randomNumber + "\nword: " + word + "\n");		//Shows message box with the lenght of the dictionary, the random number selected and the word selected
 			}
 
-            wordArray = word.ToCharArray();
+            wordArray = word.ToCharArray();		//Converts the word to a char array
 
-            foreach(char c in word)
+            foreach(char c in word)		//For every letter in the word
             {
-                lblWord.Text += "*";
+                lblWord.Text += "*";		//Places a star in lblWord for every letter in the word
             }
 
-			tabControl1.SelectedIndex = 1;
+			tabControl1.SelectedIndex = 1;		//Moves to the next tab. The game tab
         }
 
-        private void btnGuess_Click(object sender, EventArgs e)
+        private void btnGuess_Click(object sender, EventArgs e)		//The guess button on the game tab
         {
-            guess = Convert.ToChar(textBoxGuess.Text);
+            guess = Convert.ToChar(textBoxGuess.Text);		//The letter guessed converted to a char
 
-            if (wordArray.Contains(guess))
+            if (wordArray.Contains(guess))		//If the word contains the guessed letter
             {
-				lblResult.Text = "Yes, " + guess + " is in the word!";
-				textBoxGuessedLetters.Text += guess + ", ";
+				lblResult.Text = "Yes, " + guess + " is in the word!";		//Sets the label lblResult saying that the letter is the the word
+				textBoxGuessedLetters.Text += guess + ", ";		//Adds the guessed letter to the Guessed letter textbox
 
-				wordCurrentGuess = lblWord.Text;
+				wordCurrentGuess = lblWord.Text;		//Sets the word label to the word with the stars in
 
-				int result = 0;
-				int counter = 0;
-				int foundLenght = 0;
-				string newChar = "";
+				int result = 0;		//The location of guessed letter
+				int foundLenght = 0;		
+				string newChar = "";		//The letter to be replaced
 
-				for (int i = 0; i < word.Length; i++)
+				for (int i = 0; i < word.Length; i++)		//For every letter in the word
 				{
-					result = word.IndexOf(guess, foundLenght, word.Length - foundLenght);
+					result = word.IndexOf(guess, foundLenght, word.Length - foundLenght);		//Find the location of the guessed letter
 
-					if (result != -1)
+					if (result != -1)		//If the location is not -1. Should never be, validation
 					{
-						foundLenght = result + 1;
-						counter++;
+						foundLenght = result + 1;		//Add one to the location of the letter
 
-						newChar = word.Substring(result, 1);   //grab the letter to be replaced
+						newChar = word.Substring(result, 1);   //select the letter to be replaced
 
 						wordCurrentGuess = wordCurrentGuess.Remove(result, 1);              //Remove the * character at this position
 
@@ -239,47 +237,47 @@ namespace Hangman_Mk.I
 					}
 				}
 
-				lblWord.Text = wordCurrentGuess;
+				lblWord.Text = wordCurrentGuess;		//Replace the word label with the newly guessed letter in the word
 
-				if (lblWord.Text.Contains("*") == false)
+				if (lblWord.Text.Contains("*") == false)		//If the word has no more stars in it
 				{
-					DialogResult playAgainResult = MessageBox.Show(
+					DialogResult playAgainResult = MessageBox.Show(		//Shows message box saying they they have won and if they want to play again
 						"Congratulations, you won!\nDo you want to play again?",
 						"Congratulations!",
 						MessageBoxButtons.YesNo);
-					if(playAgainResult == DialogResult.Yes)
+					if(playAgainResult == DialogResult.Yes)		//If they want to play again
 					{
-						lives = 10;
+						lives = 10;		//Resets everything
 						word = "";
 						textBoxGuessedLetters.Text = "";
 						textBoxGuess.Text = "";
 						tabControl1.SelectedIndex = 0;
 						lblWord.Text = "";
 					}
-					else
+					else		//If they don't want to play again
 					{
-						Application.Exit();
+						Application.Exit();		//Exit the application
 					}
 				}
             }
-            else
+			else		//If the guessed letter is not in the word
             {
-                lives = lives - 1;
+                lives = lives - 1;		//Removes a life
 
-                textBoxGuessedLetters.Text += guess + ", ";
-				lblResult.Text = "Nope, " + guess + " is not in the word.";
+                textBoxGuessedLetters.Text += guess + ", ";		//Adds the guessed letter to the guesses letter textbox
+				lblResult.Text = "Nope, " + guess + " is not in the word.";		//Tells you the letter is not in the word
 
-                switch (lives)
+                switch (lives)		//Switch case for the image depending on the number of lives
                 {
-                    case 0:
-                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang10;
-                        textBoxLives.Text = "0";
-                        MessageBox.Show(
+                    case 0:		//When you have 0 lives
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang10;		//Display respective image
+                        textBoxLives.Text = "0";		//Change lives text box to 0
+                        MessageBox.Show(		//Show message box saying you got hanged and what the word was
                             "You got hanged! \nThe word was: " + word, 
                             "You're Dead!"
                         );
 
-                        DialogResult playAgainResult = MessageBox.Show(
+                        DialogResult playAgainResult = MessageBox.Show(		//Askes if you want to play again. Same process as before
                             "Do you want to play again?", 
                             "Play again", 
                             MessageBoxButtons.YesNo
@@ -299,8 +297,8 @@ namespace Hangman_Mk.I
                             Application.Exit();
                         }
                             break;
-                    case 1:
-                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang9;
+                    case 1:		//When there is 1 life. Same for each number of lives
+                        pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang9;		//Displays respective image
                             break;
                     case 2:
                         pictureBoxHangman.Image = Hangman_Mk.I.Properties.Resources.hang8;
@@ -331,10 +329,10 @@ namespace Hangman_Mk.I
             }
         }
 		
-		private void letterW_Click(object sender, EventArgs e)
+		private void letterW_Click(object sender, EventArgs e)		//Letter W button. Same for each letter
 		{
-			textBoxGuess.Text = "W";
-			letterW.Enabled = false;
+			textBoxGuess.Text = "W";		//Set guess letter in the guess textbox
+			letterW.Enabled = false;		//Disables the button so you can't guess the letter again
 		}
 
 		private void letterDecimal_Click(object sender, EventArgs e)
@@ -499,36 +497,35 @@ namespace Hangman_Mk.I
 			letterA.Enabled = false;
 		}
 
-		private void btnSave_Click(object sender, EventArgs e)
+		private void btnSave_Click(object sender, EventArgs e)		//When the save button is clicked
 		{
-			SaveFileDialog save = new SaveFileDialog();
-			save.FileName = textBoxNewWordSetName.Text + ".hangmanDictionary";
-			save.Filter = "Hangman Dictionary File | *.hangmanDictionary";
-			if (save.ShowDialog() == DialogResult.OK)
+			SaveFileDialog save = new SaveFileDialog();		//Creates a new instance of a save file dialog called save
+			save.FileName = textBoxNewWordSetName.Text + ".hangmanDictionary";		//The default file name to the name set in the textbox + .hangmanDictionary
+			save.Filter = "Hangman Dictionary File|*.hangmanDictionary";		//Sets the filter to .hangmanDictionary
+			if (save.ShowDialog() == DialogResult.OK)		//If ok is cliked in save
 			{
-				string saveFileName = save.FileName;
+				string saveFileName = save.FileName;		//Sets saveFileName as the saved filename for
 
-				File.WriteAllLines(saveFileName, richTextBoxNewWordSet.Lines);
+				File.WriteAllLines(saveFileName, richTextBoxNewWordSet.Lines);		//Writes alllines in the richtextbox to the file
 			}
-			
 		}
 
-		private void btnOpen_Click(object sender, EventArgs e)
+		private void btnOpen_Click(object sender, EventArgs e)		//When the open button is clicked
 		{
-			OpenFileDialog open = new OpenFileDialog();
-			open.Filter = "Hangman Dictionary File|*.hangmanDictionary|All Files|*.*";
+			OpenFileDialog open = new OpenFileDialog();		//Creates new instance of an OpenFileDialog called open
+			open.Filter = "Hangman Dictionary File|*.hangmanDictionary|All Files|*.*";		//Sets the filter to all files and .hangmanDictionary
 			open.FilterIndex = 1;
 
-			if (open.ShowDialog() == DialogResult.OK)
+			if (open.ShowDialog() == DialogResult.OK)		//If ok is clicked in open
 			{
-				words = File.ReadAllLines(open.FileName);
+				words = File.ReadAllLines(open.FileName);		//Reads the contents of of thw file into thw word array
 
-				for (int i = 0; i < words.Length; i++)
+				for (int i = 0; i < words.Length; i++)		
 				{
-					words[i] = words[i].ToUpper();
+					words[i] = words[i].ToUpper();		//Converts all the indexes to uppercase
 				}
 
-				Random random = new Random();
+				Random random = new Random();		//Same process as before
 				randomNumber = random.Next(0, wordsLength);
 				word = words[randomNumber];
 
